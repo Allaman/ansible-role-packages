@@ -27,19 +27,10 @@ Run `molecule test` to test this role in a docker container
   - `gui.arch`: List of packages to install on Arch Linux only
   - `gui.debian`: List of packages to install on Debian only
 
-- `lang`: Manage programming languages
-
-  - `lang.enabled`: Set to `True` to enable installation of programming languages
-  - `lang.common`: List of common packages to install on all types of OS
-  - `lang.arch`: List of packages to install on Arch Linux only
-  - `lang.debian`: List of packages to install on Debian only
-
 - `install_aur_helper`: Set to `True` to install an [AUR helper](https://aur.archlinux.org/)
 - `is_test`: Set to `True` only required when running molecule test
 
 ## Dependencies
-
-ansible-role-basic
 
 ## Example Playbook
 
