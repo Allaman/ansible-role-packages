@@ -25,16 +25,6 @@
         - xclip
       debian:
         - pinta
-    lang:
-      enabled: true
-      common:
-      arch:
-        - python
-        - go
-        - nodejs
-        - python-pip
-        - npm
-      debian:
   tasks:
     - name: "Include ansible-role-packages"
       include_role:

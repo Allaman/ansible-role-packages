@@ -47,29 +47,5 @@
     state: present
   when: ansible_os_family == "Debian" and gui.debian is defined and gui.enabled|default(false) == true
 
-- name: Install common language packages
-  become: true
-  pacman:
-    update_cache: true
-    name: "{{ lang.common }}"
-    state: present
-  when: lang.common is defined and lang.enabled|default(false) == true
-
-- name: Install Arch lang packages
-  become: true
-  pacman:
-    update_cache: true
-    name: "{{ lang.arch }}"
-    state: present
-  when: ansible_os_family == "Archlinux" and lang.arch is defined and lang.enabled|default(false) == true
-
-- name: Install Debian lang packages
-  become: true
-  apt:
-    update_cache: true
-    name: "{{ lang.debian }}"
-    state: present
-  when: ansible_os_family == "Debian" and lang.debian is defined and lang.enabled|default(false) == true
-
 - include_tasks: aur.yml
   when: ansible_os_family == "Archlinux" and install_aur_helper|default(false) == true
